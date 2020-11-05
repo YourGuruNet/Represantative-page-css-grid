@@ -1,7 +1,13 @@
 :root {
   --baseColor: #8e2f5c;
   --baseColorLight: #d58eb0;
-  --baseColorDark: #6a123c; }
+  --baseColorDark: #6a123c;
+  --lightGrey: #e6e6e6;
+  --MediumGrey: #949494;
+  --DarkGrey: #6d6c6c;
+  --Light: #fff;
+  --DarkShadow: 0 2rem 6rem #000000af;
+  --LightShadow: 0 0.5rem 1rem #000000af; }
 
 *,
 *::before,
@@ -18,5 +24,45 @@ html {
 body {
   font-family: "Open Sans", sans-serif;
   background-color: var(--baseColor);
+  color: var(--MediumGrey);
   font-weight: 400;
-  line-height: 1.6; }
+  line-height: 1.6;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh; }
+
+.logo {
+  height: 3.25rem; }
+
+.search__icon {
+  height: 2rem;
+  width: 2rem; }
+
+.user-nav__icon {
+  height: 2.25rem;
+  width: 2.25rem; }
+
+.user-nav__user-photo {
+  height: 3.75rem;
+  border-radius: 50%; }
+
+.container {
+  max-width: 120rem;
+  margin: 8rem auto;
+  background-color: var(--lightGrey);
+  box-shadow: var(--DarkShadow); }
+
+.header {
+  height: 7rem;
+  background-color: var(--Light);
+  box-shadow: var(--LightShadow); }
+
+.content {
+  display: flex; }
+
+.sidebar {
+  background-color: var(--DarkGrey);
+  flex: 0 0 18%; }
+
+.hotel-view {
+  flex: 1; }

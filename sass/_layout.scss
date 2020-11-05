@@ -1,0 +1,25 @@
+.container {
+  max-width: 120rem;
+  margin: 8rem auto;
+  background-color: var(--lightGrey);
+  box-shadow: var(--DarkShadow);
+}
+
+.header {
+  height: 7rem;
+  background-color: var(--Light);
+  box-shadow: var(--LightShadow);
+}
+
+.content {
+  display: flex;
+}
+
+.sidebar {
+  background-color: var(--DarkGrey);
+  flex: 0 0 18%; //flex firs if it's grow -  no, second if it's shrunk - no, but always stay 18% width
+}
+
+.hotel-view {
+  flex: 1; // occupies all empty space
+}

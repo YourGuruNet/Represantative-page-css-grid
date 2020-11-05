@@ -3,6 +3,13 @@
   --baseColor: #8e2f5c;
   --baseColorLight: #d58eb0;
   --baseColorDark: #6a123c;
+  --lightGrey: #e6e6e6;
+  --MediumGrey: #949494;
+  --DarkGrey: #6d6c6c;
+  --Light: #fff;
+
+  --DarkShadow: 0 2rem 6rem #000000af;
+  --LightShadow: 0 0.5rem 1rem #000000af;
 }
 
 *,
@@ -21,6 +28,10 @@ html {
 body {
   font-family: "Open Sans", sans-serif;
   background-color: var(--baseColor);
+  color: var(--MediumGrey);
   font-weight: 400;
   line-height: 1.6;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
 }
