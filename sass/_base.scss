@@ -1,0 +1,26 @@
+//Variables
+:root {
+  --baseColor: #8e2f5c;
+  --baseColorLight: #d58eb0;
+  --baseColorDark: #6a123c;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; /* % from default value 16px now the default value is 10px an I can easy work with rem*/
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--baseColor);
+  font-weight: 400;
+  line-height: 1.6;
+}
