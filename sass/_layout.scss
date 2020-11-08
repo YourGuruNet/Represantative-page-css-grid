@@ -6,9 +6,17 @@
 }
 
 .header {
+  font-size: 1.4rem;
   height: 7rem;
   background-color: var(--Light);
   box-shadow: var(--LightShadow);
+  border-bottom: var(--MediumGreyBorder);
+  z-index: 99;
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .content {
@@ -18,8 +26,36 @@
 .sidebar {
   background-color: var(--DarkGrey);
   flex: 0 0 18%; //flex firs if it's grow -  no, second if it's shrunk - no, but always stay 18% width
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .hotel-view {
   flex: 1; // occupies all empty space
+}
+
+// Details about rooms and reviews
+.detail {
+  font-size: 1.4rem;
+  display: flex;
+  padding: 4.5rem;
+  background-color: var(--lightGrey);
+  border-bottom: var(--MediumGreyBorder);
+}
+
+.description {
+  border-radius: 0.5rem;
+  background-color: var(--Light);
+  box-shadow: var(--LightShadow);
+  padding: 3rem;
+  flex: 0 0 60%;
+  margin-left: 4.5rem;
+}
+
+.user-reviews {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

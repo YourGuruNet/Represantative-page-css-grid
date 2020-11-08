@@ -8,6 +8,10 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne+Tactile&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="shortcut icon" type="logo/png" href="img/logo.png" />
 
@@ -16,14 +20,10 @@
   <body>
     <div class="container">
       <header class="header">
-        <img src="/img/logo.png" alt="logo" class="logo" />
+        <h4 class="logo"><span>hotel</span>.com</h4>
         <form action="#" class="search">
-          <input
-            type="text"
-            class="search__input"
-            placeholder="search hotels"
-          />
-          <button class="search_button">
+          <input type="text" class="search__input" placeholder="Search hotel" />
+          <button class="search__button">
             <svg class="search__icon">
               <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
             </svg>
@@ -49,8 +49,209 @@
         </nav>
       </header>
       <div class="content">
-        <nav class="sidebar">Navigation</nav>
-        <main class="hotel-view">Hotel view</main>
+        <main class="hotel-view">
+          <div class="gallery">
+            <figure class="gallery__item">
+              <img src="img/hotel1.jpg" alt="hotel-1" class="gallery__photo" />
+            </figure>
+            <figure class="gallery__item">
+              <img src="img/hotel2.jpg" alt="hotel-2" class="gallery__photo" />
+            </figure>
+            <figure class="gallery__item">
+              <img src="img/hotel3.jpg" alt="hotel-3" class="gallery__photo" />
+            </figure>
+          </div>
+
+          <div class="overview">
+            <h1 class="overview__heading">Hotel Grand Maldive</h1>
+            <div class="overview__stars">
+              <svg class="overview__icon-stars">
+                <use xlink:href="img/sprite.svg#icon-star-outlined"></use>
+              </svg>
+              <svg class="overview__icon-stars">
+                <use xlink:href="img/sprite.svg#icon-star-outlined"></use>
+              </svg>
+              <svg class="overview__icon-stars">
+                <use xlink:href="img/sprite.svg#icon-star-outlined"></use>
+              </svg>
+              <svg class="overview__icon-stars">
+                <use xlink:href="img/sprite.svg#icon-star-outlined"></use>
+              </svg>
+              <svg class="overview__icon-stars">
+                <use xlink:href="img/sprite.svg#icon-star-outlined"></use>
+              </svg>
+            </div>
+            <div class="overview__location">
+              <svg class="overview__icon-location">
+                <use xlink:href="img/sprite.svg#icon-location"></use>
+              </svg>
+              <button class="btn-inline">Coco Island, Maldive</button>
+            </div>
+            <div class="overview__rating">
+              <div class="overview__rating-average">9.3</div>
+              <div class="overview__rating-count">392 ratings</div>
+            </div>
+          </div>
+
+          <div class="detail">
+            <figure class="user-reviews">
+              <figure class="review">
+                <blockquote class="review__text">
+                  Breakfast was amazing, the staff were amazing.. loved it!!
+                  Celebrated our 22nd anniversary and they staff left a little
+                  gift bag. Above and beyond!!
+                </blockquote>
+                <figcaption class="review__user">
+                  <img
+                    src="img/user-1.jpg"
+                    alt="user-1"
+                    class="review__photo"
+                  />
+                  <div class="review__user-box">
+                    <p class="review__user-name">Jona Smilga</p>
+                    <p class="review__user-date">Jan 24rd, 2020</p>
+                  </div>
+                  <div class="review__rating">8.9</div>
+                </figcaption>
+              </figure>
+
+              <figure class="review">
+                <blockquote class="review__text">
+                  Well this is my second time staying here as usual my stay was
+                  great the staff was really friendly and my room was very
+                  clean.
+                </blockquote>
+                <figcaption class="review__user">
+                  <img
+                    src="img/user-2.jpg"
+                    alt="user-1"
+                    class="review__photo"
+                  />
+                  <div class="review__user-box">
+                    <p class="review__user-name">Michail Bide</p>
+                    <p class="review__user-date">Dec 21rd, 2019</p>
+                  </div>
+                  <div class="review__rating">8.4</div>
+                </figcaption>
+              </figure>
+              <button class="btn-inline">Show more <span>&rarr;</span></button>
+            </figure>
+            <div class="description">
+              <p class="paragraph">
+                Resort Maldives features a restaurant, outdoor swimming pool, a
+                fitness centre and bar in Fenfushi. Among the facilities at this
+                property are a kids' club and a shared lounge, along with free
+                WiFi throughout the property. The accommodation provides a
+                24-hour front desk, room service and currency exchange for
+                guests.
+              </p>
+              <p class="paragraph">
+                The units come with air conditioning, a flat-screen TV with
+                cable channels, a kettle, a shower, a hairdryer and a wardrobe.
+                At the hotel, all rooms come with a private bathroom with free
+                toiletries.
+              </p>
+              <ul class="list">
+                <li class="list__item">
+                  <span class="list__item-check-mark"> &#x2713;</span> Breakfast
+                  included
+                </li>
+                <li class="list__item">
+                  <span class="list__item-check-mark"> &#x2713;</span> No
+                  smoking room
+                </li>
+                <li class="list__item">
+                  <span class="list__item-check-mark"> &#x2713;</span> Nice view
+                </li>
+                <li class="list__item">
+                  <span class="list__item-check-mark"> &#x2713;</span> Privet
+                  bathroom
+                </li>
+                <li class="list__item">
+                  <span class="list__item-check-mark"> &#x2713;</span> Close to
+                  beach
+                </li>
+                <li class="list__item">
+                  <span class="list__item-check-mark"> &#x2713;</span> WiFi
+                  available in all areas
+                </li>
+                <li class="list__item">
+                  <span class="list__item-check-mark"> &#x2713;</span> Airport
+                  shuttle
+                </li>
+                <li class="list__item">
+                  <span class="list__item-check-mark"> &#x2713;</span>
+                  Tea/coffee maker in all rooms
+                </li>
+              </ul>
+
+              <div class="recommend">
+                <p class="recommend__count">
+                  Enzo and 3 other friends recommend this place.
+                </p>
+                <div class="recommend__friends">
+                  <img
+                    src="img/user-1.jpg"
+                    alt="friend-1"
+                    class="recommend__photo"
+                  />
+                  <img
+                    src="img/user-2.jpg"
+                    alt="friend-2"
+                    class="recommend__photo"
+                  />
+                  <img
+                    src="img/user-3.jpg"
+                    alt="friend-3"
+                    class="recommend__photo"
+                  />
+                  <img
+                    src="img/user-4.jpg"
+                    alt="friend-4"
+                    class="recommend__photo"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <nav class="sidebar">
+          <ul class="side-nav">
+            <li class="side-nav__item">
+              <a href="#" class="side-nav__link">
+                <span>Hotel</span>
+                <svg class="side-nav__icon">
+                  <use xlink:href="img/sprite.svg#icon-home"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="side-nav__item">
+              <a href="#" class="side-nav__link">
+                <span>Flight</span>
+                <svg class="side-nav__icon">
+                  <use xlink:href="img/sprite.svg#icon-aircraft-take-off"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="side-nav__item">
+              <a href="#" class="side-nav__link">
+                <span>Car rental</span>
+                <svg class="side-nav__icon">
+                  <use xlink:href="img/sprite.svg#icon-key"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="side-nav__item">
+              <a href="#" class="side-nav__link">
+                <span>Tours</span>
+                <svg class="side-nav__icon">
+                  <use xlink:href="img/sprite.svg#icon-map"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+          <div class="legal">&copy; All rights reserved by yourgurunet.com</div>
+        </nav>
       </div>
     </div>
   </body>

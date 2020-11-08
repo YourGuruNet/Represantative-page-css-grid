@@ -1,35 +1,384 @@
 // Header
 .logo {
-  height: 3.25rem;
+  font-size: 4rem;
+  font-family: "Syne Tactile", cursive;
+  margin-left: 2rem;
+  span {
+    color: var(--baseColor);
+  }
 }
 
 .search {
+  flex: 0 0 40%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   &__input {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: var(--lightGrey);
+    border: none;
+    padding: 0.7rem 2rem;
+    border-radius: 10rem;
+    width: 90%;
+    transition: all 0.2s;
+    margin-right: -3rem;
+
+    &:focus {
+      outline: none;
+      width: 100%;
+    }
+
+    &::-webkit-input-placeholder {
+      font-weight: 100;
+      opacity: 0.6;
+
+      &:active {
+        opacity: 1;
+      }
+    }
   }
 
   &__button {
+    border: none;
+    background-color: transparent;
+    transition: all 2s;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      transform: rotate(720deg);
+    }
+    &:active {
+      transform: scale(1.3);
+    }
   }
   &__icon {
     height: 2rem;
     width: 2rem;
+    fill: var(--MediumGrey);
   }
 }
 
 .user-nav {
+  margin-right: 1.5rem;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+
+  & > * {
+    padding: 0 2rem;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      background-color: var(--lightGrey);
+    }
+  }
+
   &__icon-box {
+    position: relative;
   }
   &__icon {
     height: 2.25rem;
     width: 2.25rem;
+    fill: var(--MediumGrey);
   }
   &__notification {
-  }
-  &__user {
+    font-size: 0.8rem;
+    height: 1.75rem;
+    width: 1.75rem;
+    border-radius: 50%;
+    background-color: var(--baseColor);
+    color: var(--Light);
+    position: absolute;
+    top: 1.5rem;
+    right: 1rem;
+    //center all elements
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   &__user-photo {
     height: 3.75rem;
+    width: 3.75rem;
     border-radius: 50%;
+    object-fit: cover;
+    margin-right: 0.5rem;
+  }
+}
+// End for Header ///////////////////////////////
+
+//Side Navigation
+.side-nav {
+  margin-top: 4rem;
+  &__item {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &__item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 0.3rem;
+    background-color: var(--baseColor);
+    transform: scaleY(0);
+    transition: transform 0.2s,
+      width 0.4s cubic-bezier(0.72, 0.04, 0, 0.99) 0.3s, opacity 0.1s;
+  }
+
+  &__item:hover::before {
+    transform: scaleY(1);
+    width: 100%;
+  }
+
+  &__item:active::before {
+    opacity: 0.8;
+  }
+
+  &__link:link,
+  &__link:visited {
+    text-decoration: none;
+    color: var(--lightGrey);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    display: block;
+    padding: 1rem 2.5em;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+  }
+  &__icon {
+    width: 2rem;
+    height: 2rem;
+    fill: currentColor;
+    margin-left: 1.5rem;
+  }
+}
+
+.legal {
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 2.5rem;
+  color: var(--lightGrey);
+}
+// Image Gallery
+.gallery {
+  display: flex;
+  &__photo {
+    width: 100%;
+    height: 20rem;
+    display: block;
+  }
+}
+
+.overview {
+  display: flex;
+  align-items: center;
+  border-bottom: var(--MediumGreyBorder);
+  background-color: var(--Light);
+
+  &__heading {
+    padding: 1.5rem 2rem;
+    font-size: 2.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+  }
+  &__stars {
+    margin-right: auto;
+    display: flex;
+  }
+  &__icon-stars,
+  &__icon-location {
+    width: 1.75rem;
+    height: 1.75rem;
+    fill: var(--baseColorLight);
+  }
+  &__icon-location {
+    margin-right: 1rem;
+  }
+  &__location {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+  }
+  &__rating {
+    align-self: stretch;
+    background-color: var(--baseColor);
+    color: var(--Light);
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  &__rating-average {
+    font-size: 2.25rem;
+    font-weight: 300;
+  }
+  &__rating-count {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+  }
+}
+
+.btn-inline {
+  border: none;
+  color: var(--baseColor);
+  font-size: inherit;
+  background-color: transparent;
+  border-bottom: 0.1rem solid currentColor;
+  padding-bottom: 0.2rem;
+  display: inline-block;
+  transition: all 0.2s;
+  margin-right: 1rem;
+  cursor: pointer;
+
+  & span {
+    margin-left: 0.3rem;
+    transition: all 0.2s;
+  }
+
+  &:hover {
+    color: var(--MediumGreyBorder);
+    outline: none;
+    span {
+      margin-left: 0.8rem;
+    }
+  }
+
+  &:focus {
+    outline: none;
+    animation: pulsate 1s infinite;
+  }
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+    box-shadow: none;
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: var(--DarkShadow);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: none;
+  }
+}
+
+// Hotel Description
+
+.recommend {
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+  &__photo {
+    box-sizing: content-box;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 0.2rem solid var(--Light);
+
+    &:not(:last-child) {
+      margin-right: -1.5rem;
+    }
+  }
+
+  &__count {
+    margin-right: auto;
+  }
+}
+.paragraph:not(:last-of-type) {
+  margin-bottom: 2rem;
+}
+
+.list {
+  list-style: none;
+  margin: 3rem 0;
+  padding: 3rem 0;
+  border-top: var(--MediumGreyBorder);
+  border-bottom: var(--MediumGreyBorder);
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    flex: 0 0 50%;
+    margin-bottom: 0.7rem;
+  }
+
+  &__item-check-mark {
+    color: var(--baseColorLight);
+  }
+}
+
+//Hotel Reviews
+
+.review {
+  background-color: var(--Light);
+  box-shadow: var(--LightShadow);
+  padding: 3rem;
+  margin-bottom: 3.5rem;
+  border-radius: 0.5rem;
+  position: relative;
+
+  &__text {
+    margin-bottom: 1rem;
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+  }
+  &__photo {
+    box-sizing: content-box;
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  &__user-box {
+    margin-left: 0.5rem;
   }
   &__user-name {
+    font-size: 1.2rem;
+  }
+  &__user-date {
+    font-size: 1rem;
+    color: var(--baseColorLight);
+  }
+  &__rating {
+    font-size: 4rem;
+    color: var(--baseColorLight);
+    margin-left: auto;
+  }
+
+  &::before {
+    content: "\201D";
+    font-size: 15rem;
+    position: absolute;
+    top: -6rem;
+    left: 1rem;
+    color: #d58eb03f;
   }
 }
