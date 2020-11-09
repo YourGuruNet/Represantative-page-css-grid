@@ -3,11 +3,15 @@
   margin: 8rem auto;
   background-color: var(--lightGrey);
   box-shadow: var(--DarkShadow);
+
+  @media only screen and (max-width: 75em) {
+    margin: 0;
+    max-width: 100%;
+  }
 }
 
 .header {
   font-size: 1.4rem;
-  height: 7rem;
   background-color: var(--Light);
   box-shadow: var(--LightShadow);
   border-bottom: var(--MediumGreyBorder);
@@ -17,10 +21,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media only screen and (max-width: 31.25em) {
+    order: 1;
+    flex-wrap: wrap;
+    align-content: space-around;
+  }
 }
 
 .content {
   display: flex;
+
+  @media only screen and (max-width: 56.25em) {
+    flex-direction: column;
+  }
 }
 
 .sidebar {
@@ -29,10 +42,17 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @media only screen and (max-width: 56.25em) {
+    order: 1;
+  }
 }
 
 .hotel-view {
   flex: 1; // occupies all empty space
+  @media only screen and (max-width: 56.25em) {
+    order: 2;
+  }
 }
 
 // Details about rooms and reviews
@@ -42,6 +62,13 @@
   padding: 4.5rem;
   background-color: var(--lightGrey);
   border-bottom: var(--MediumGreyBorder);
+  @media only screen and (max-width: 56.25em) {
+    padding: 1.5rem;
+  }
+
+  @media only screen and (max-width: 31.25em) {
+    flex-direction: column;
+  }
 }
 
 .description {
@@ -51,6 +78,14 @@
   padding: 3rem;
   flex: 0 0 60%;
   margin-left: 4.5rem;
+  @media only screen and (max-width: 56.25em) {
+    padding: 1.5rem;
+    margin-left: 1.5rem;
+  }
+  @media only screen and (max-width: 31.25em) {
+    order: 1;
+    margin-left: 0;
+  }
 }
 
 .user-reviews {
@@ -58,4 +93,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media only screen and (max-width: 31.25em) {
+    order: 2;
+    margin-top: 1rem;
+  }
 }

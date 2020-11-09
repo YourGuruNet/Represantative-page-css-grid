@@ -1,3 +1,11 @@
+// Xpx / 16 = em
+// 75em - 1200px
+//68.75em - 1100px
+//56.25em - 900px
+//37.5em - 600px
+//31.25em - 500px
+//25em - 400px
+
 //Variables
 :root {
   --baseColor: #8e2f5c;
@@ -24,6 +32,17 @@
 html {
   font-size: 62.5%; /* % from default value 16px now the default value is 10px an I can easy work with rem*/
   box-sizing: border-box;
+
+  @media only screen and (max-width: 68.75em) {
+    font-size: 55%;
+  }
+
+  @media only screen and (max-width: 56.25em) {
+    font-size: 50%;
+  }
+  @media only screen and (max-width: 37.5em) {
+    font-size: 45%;
+  }
 }
 
 body {
