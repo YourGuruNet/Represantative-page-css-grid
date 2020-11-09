@@ -315,6 +315,47 @@ body {
     left: 1rem;
     color: #d58eb03f; }
 
+.book-now-section {
+  padding: 3.5rem 0;
+  text-align: center; }
+  .book-now-section__heading {
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 2.5rem; }
+
+.btn {
+  font-size: 1.5rem;
+  font-weight: 300;
+  position: relative;
+  text-transform: uppercase;
+  border: none;
+  background: linear-gradient(to left, var(--baseColor), var(--baseColorLight));
+  color: var(--Light);
+  overflow: hidden;
+  cursor: pointer; }
+  .btn:focus {
+    outline: none; }
+  .btn > * {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    transition: all 0.2s; }
+  .btn__visible {
+    padding: 2rem 6rem; }
+  .btn__hided {
+    position: absolute;
+    left: 0;
+    top: -100%;
+    padding: 2rem 0; }
+  .btn:hover {
+    background: linear-gradient(to left, var(--baseColorLight), var(--baseColor));
+    animation: pulsate 1s infinite; }
+  .btn:hover .btn__hided {
+    top: 0; }
+  .btn:hover .btn__visible {
+    transform: translateY(100%); }
+
 .container {
   max-width: 120rem;
   margin: 8rem auto;
